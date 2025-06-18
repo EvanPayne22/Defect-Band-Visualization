@@ -10,7 +10,7 @@ import argparse
 from matplotlib.ticker import MaxNLocator
 from matplotlib.ticker import MultipleLocator
 
-parser = argparse.ArgumentParser(description="Arguments for charge defect ",
+parser = argparse.ArgumentParser(description="Arguments for defect visualization",
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument("-hseext", nargs='?', type=bool, default = False, help="shows HSE region on PBE or alt plots")
 parser.add_argument("-fileloc", nargs='?', default = "./eigenVal.txt", help="set the location of the file")
@@ -18,7 +18,7 @@ parser.add_argument("-saveloc", nargs='?', default = "./pbehseeigplot.png", help
 parser.add_argument("-linewidth", nargs='?', type=int, default = 2, help="sets line thickness")
 parser.add_argument("-dotsize", nargs='?', type=int, default = 100, help="sets size of the dotd on plots")
 parser.add_argument("-fontsize", nargs='?', type=int, default = 18, help="sets fontsize")
-parser.add_argument("-plotwidth", nargs='?', type=int, default = 6, help="sets width of the plots (I recommend 6 per plot)")
+parser.add_argument("-plotwidth", nargs='?', type=int, default = 6, help="sets width of the plots (I recommend 3 per plot)")
 args = parser.parse_args()
 config = vars(args)
 
