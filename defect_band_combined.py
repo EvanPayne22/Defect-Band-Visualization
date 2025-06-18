@@ -10,7 +10,7 @@ import argparse
 from matplotlib.ticker import MaxNLocator
 from matplotlib.ticker import MultipleLocator
 
-parser = argparse.ArgumentParser(description="Arguments for charge defect ",
+parser = argparse.ArgumentParser(description="Arguments for defect visualization",
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument("-hseext", nargs='?', type=bool, default = False, help="shows HSE region on PBE or alt plots")
 parser.add_argument("-fileloc", nargs='?', default = "./eigenVal.txt", help="sets the location of the file")
