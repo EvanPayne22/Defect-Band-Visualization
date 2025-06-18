@@ -19,3 +19,5 @@ This script produces indicuadlly plots comparing the pure PBE rsults to the HSE 
 
 ### Test Files
 The combined_example.txt is an example of the input file. There are no additional tags needed. Although I would recommend setting the plotwidth tag to 12 (generally 6 per defect).
+
+![Combined Band Energies Example Image](images/combined.png)
