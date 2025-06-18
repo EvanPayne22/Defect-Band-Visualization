@@ -10,8 +10,15 @@ The example files need to be specified with the fileloc tag or the file name wil
 This script produces seperate plots for each defect. You can use the tags to display PBE band gaps relative to the HSE band gaps.
 
 ### Test Files
-The hse_example.txt file is an example to use without the -hseext tag. This will indivdually display the plots without any grey region.
+The hse_example.txt file is an example to use without the -hseext tag. This will indivdually display the plots without any grey region.  
 The pbe_hse_edges_example.txt is used to indvidually display the defects with the grey region showing the HSE extended region and the white region displaying the PBE. This can be done by setting the -hseext tag to True.
+
+### Sample Images
+#### No HSEEXT Tag  
+<img src="images/hseexample.png" alt="Pure HSE Band Energies Example Image" width="600"/>
+
+#### HSEEXT Tag Enabled  
+<img src="images/pbeexample.png" alt="PBE with HSE Extension Band Energies Example Image" width="600"/>
 
 ## defect_band_combined.py
 ### Description
@@ -20,4 +27,5 @@ This script produces indicuadlly plots comparing the pure PBE rsults to the HSE 
 ### Test Files
 The combined_example.txt is an example of the input file. There are no additional tags needed. Although I would recommend setting the plotwidth tag to 12 (generally 6 per defect).
 
-![Combined Band Energies Example Image](images/combined.png)
+### Sample Image  
+<img src="images/combined.png" alt="Combined Band Energies Example Image" width="600"/>
