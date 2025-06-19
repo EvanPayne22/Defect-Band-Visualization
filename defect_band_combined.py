@@ -136,7 +136,8 @@ for i in range (0, len(eigenVal)):
         
         plt.xlim(0,1)
         plt.ylim(0, cond_band_edge)
-        plt.ylabel("Energy (eV)", fontsize = fontSize, labelpad=12)
+        if(plotNum == 1):
+            plt.ylabel("Energy (eV)", fontsize = fontSize, labelpad=12)
         
         energy, occupancy = [], []
         count = 0
