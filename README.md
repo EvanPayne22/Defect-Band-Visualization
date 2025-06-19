@@ -15,10 +15,10 @@ The pbe_hse_edges_example.txt is used to indvidually display the defects with th
 
 ### Sample Images
 #### No HSEEXT Tag  
-<img src="images/hseexample.png" alt="Pure HSE Band Energies Example Image" width="600"/>
+<img src="images/hse.png" alt="Pure HSE Band Energies Example Image" width="600"/>
 
 #### HSEEXT Tag Enabled  
-<img src="images/pbeexample.png" alt="PBE with HSE Extension Band Energies Example Image" width="600"/>
+<img src="images/pbe.png" alt="PBE with HSE Extension Band Energies Example Image" width="600"/>
 
 ## defect_band_combined.py
 ### Description
