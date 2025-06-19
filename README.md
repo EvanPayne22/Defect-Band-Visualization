@@ -15,10 +15,10 @@ The pbe_hse_edges_example.txt is used to indvidually display the defects with th
 
 ### Sample Images
 #### No HSEEXT Tag  
-<img src="images/hse.png" alt="Pure HSE Band Energies Example Image" width="300"/>
+<img src="images/hse.png" alt="Pure HSE Band Energies Example Image" height="200"/>
 
 #### HSEEXT Tag Enabled  
-<img src="images/pbe.png" alt="PBE with HSE Extension Band Energies Example Image" width="300"/>
+<img src="images/pbe.png" alt="PBE with HSE Extension Band Energies Example Image" height="200"/>
 
 ## defect_band_combined.py
 ### Description
@@ -28,4 +28,4 @@ This script produces indicuadlly plots comparing the pure PBE rsults to the HSE 
 The combined_example.txt is an example of the input file. There are no additional tags needed. Although I would recommend setting the plotwidth tag to 12 (generally 6 per defect).
 
 ### Sample Image  
-<img src="images/combined.png" alt="Combined Band Energies Example Image" width="600"/>
+<img src="images/combined.png" alt="Combined Band Energies Example Image" height="200"/>
