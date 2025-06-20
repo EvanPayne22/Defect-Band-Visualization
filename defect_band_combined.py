@@ -12,13 +12,14 @@ from matplotlib.ticker import MultipleLocator
 
 parser = argparse.ArgumentParser(description="Arguments for defect visualization",
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument("-hseext", nargs='?', type=bool, default = False, help="shows HSE region on PBE or alt plots")
 parser.add_argument("-fileloc", nargs='?', default = "./eigenVal.txt", help="sets the location of the file")
 parser.add_argument("-saveloc", nargs='?', default = "./pbehseeigplot.png", help="sets the location of the file")
 parser.add_argument("-linewidth", nargs='?', type=int, default = 2, help="sets line thickness")
 parser.add_argument("-dotsize", nargs='?', type=int, default = 100, help="sets size of the dotd on plots")
 parser.add_argument("-fontsize", nargs='?', type=int, default = 18, help="sets fontsize")
 parser.add_argument("-plotwidth", nargs='?', type=int, default = 6, help="sets width of the plots (I recommend 6 per plot)")
+parser.add_argument("-dft", nargs='?', default = "PBE", help="sets the name of method 1")
+parser.add_argument("-hybrid", nargs='?', default = "HSE", help="sets the name of method 2")
 args = parser.parse_args()
 config = vars(args)
 
@@ -80,12 +81,12 @@ for i in range (0, len(eigenVal)):
             ax = plt.gca()  # Get current subplot (Axes) instance
 
             #Adds PBE and HSE labels
-            ax.text(0.2, -0.03, "PBE", transform=ax.transAxes,
-                    ha='left', va='top', fontsize=fontSize)
-            ax.text(0.9, -0.03, "HSE-SOC", transform=ax.transAxes,
-                    ha='right', va='top', fontsize=fontSize)
-            ax.text(0.55, 0.5, defect_name, transform=ax.transAxes,
-                    ha='right', va='top', fontsize=fontSize)
+            ax.text(0.25, -0.03, config["dft"], transform=ax.transAxes,
+                    ha='center', va='top', fontsize=fontSize)
+            ax.text(0.75, -0.03, config["hybrid"], transform=ax.transAxes,
+                    ha='center', va='top', fontsize=fontSize)
+            ax.text(0.5, 0.5, defect_name, transform=ax.transAxes,
+                    ha='center', va='top', fontsize=fontSize)
             #Formats the y-axis
             ax.yaxis.set_major_locator(MaxNLocator(integer=True))
             ax.tick_params(axis='y', labelsize=fontSize)  # Change 10 to your desired font size
@@ -136,6 +137,7 @@ for i in range (0, len(eigenVal)):
         
         plt.xlim(0,1)
         plt.ylim(0, cond_band_edge)
+        
         if(plotNum == 1):
             plt.ylabel("Energy (eV)", fontsize = fontSize, labelpad=12)
         
